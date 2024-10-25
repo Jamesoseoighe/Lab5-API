@@ -27,7 +27,8 @@ app.use((err, req, res, next) => {
 
 
 app.get('/api/movies', (req, res) => {
-    const movies = [
+    
+    const myMovies = [
         {
             "Title": "Avengers: Infinity War",
             "Year": "2018",
@@ -50,5 +51,6 @@ app.get('/api/movies', (req, res) => {
             "Poster": "https://example.com/poster3.jpg"
         }
     ];
-    res.json({ movies });
+    res.json({ myMovies });
+    res.status(201).json({ myMovies });
 });
