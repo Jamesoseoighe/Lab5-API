@@ -9,10 +9,12 @@ app.get('/', (req, res) => {
 
 
 
-app.get('/hello/:name', (req, res) => {
-    const name = req.params.name;
-    res.send(`Hello ${name}`);
+app.get('/hello/:name/:lname', (req, res) => {
+    res.send("hello "+req.params.name+" "+req.params.lname);
+    
 });
+
+
 
 
 app.listen(port, () => {
